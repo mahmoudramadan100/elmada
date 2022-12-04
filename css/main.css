@@ -24,7 +24,7 @@ a:hover {
   text-decoration: none;
 }
 
-transition, .about-us .read-more, .info .box .bg-color, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
+transition, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
 .up-navbar .right li a .icon, .up-navbar .left li a,
 .up-navbar .right li a {
   transition: 0.3s;
@@ -570,7 +570,7 @@ transition, .about-us .read-more, .info .box .bg-color, .package .boxing .box .b
   gap: 10px;
 }
 .services .box .img {
-  width: 300px;
+  width: 265px;
   height: 90px;
   display: flex;
   padding: 5px;
@@ -953,7 +953,7 @@ transition, .about-us .read-more, .info .box .bg-color, .package .boxing .box .b
 }
 .info .box span {
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   color: #21232f;
   height: 45px;
   font-weight: bold;
@@ -1147,6 +1147,10 @@ transition, .about-us .read-more, .info .box .bg-color, .package .boxing .box .b
 .about-us .accordion .show {
   color: #ff6b6b !important;
 }
+.about-us .accordion .card {
+  border: none;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+}
 .about-us .accordion .card-header {
   display: block;
   border: 1px solid #ff6b6b;
@@ -1158,6 +1162,7 @@ transition, .about-us .read-more, .info .box .bg-color, .package .boxing .box .b
   font-size: 13px;
   color: #a4a2a7;
   line-height: 1.8;
+  box-shadow: none;
 }
 @media (min-width: 0) and (max-width: 576px) {
   .about-us .accordion {

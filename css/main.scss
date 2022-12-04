@@ -523,7 +523,7 @@ transition {
         gap: 10px;
         @extend transition;
         .img {
-            width: 300px;
+            width: 265px;
             height: 90px;
             display: flex;
             padding: 5px;
@@ -913,9 +913,10 @@ transition {
         align-items: center;
         background-color: #fff;
         margin: 0 5px;
+        @extend transition;
         span {
             text-align: center;
-            font-size: 18px;
+            font-size: 16px;
             color: $second-color;
             height: 45px;
             font-weight: bold;
@@ -1093,6 +1094,10 @@ transition {
         .show {
             color: $main-color !important;
         }
+        .card {
+            border: none;
+            border-right: 1px solid rgba(0,0,0,.125);
+        }
         .card-header {
             display: block;
             border: 1px solid $main-color;
@@ -1104,6 +1109,7 @@ transition {
             font-size: 13px;
             color: $gray-color;
             line-height: 1.8;
+            box-shadow: none;
         }
         @include breakpoints(mobile){
            padding: 20px 0;
