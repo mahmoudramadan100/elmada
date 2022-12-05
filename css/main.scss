@@ -1062,12 +1062,24 @@ transition {
             display: inline-block;
             float: right;
             margin-left: 20px;
+            @include breakpoints(medium) {
+                width: 100%;
+               display: block;
+               float: none;
+               margin-bottom: 20px;
+            }
         }
         p {
             color: #a4a2a7;
             font-size: 13px;
             line-height: 1.8;
             margin-bottom: 20px;
+            @include breakpoints(mobile) {
+                font-size: 12px;
+            }
+            @include breakpoints(mobile) {
+                font-size: 11px;
+            }
         }
     }
     .read-more {
@@ -1413,7 +1425,16 @@ transition {
             padding-right: 10px;
             position: relative;
             padding-bottom: 15px;
-            border-bottom: 1px solid #3d3f4b ;
+            border-bottom: 1px solid #3d3f4b;
+            @include breakpoints(medium) {
+                font-size: 15px;
+            }
+            @include breakpoints(small) {
+                font-size: 14px;
+            }
+            @include breakpoints(mobile) {
+                font-size: 14px;
+            }
         }
         .list {
             margin: 0;
@@ -1428,6 +1449,12 @@ transition {
                     @extend transition;
                     &:hover {
                         color: $main-color;
+                    }
+                    @include breakpoints(small) {
+                        font-size: 12px;
+                    }
+                    @include breakpoints(mobile) {
+                        font-size: 11px;
                     }
                 }
             }
@@ -1489,6 +1516,9 @@ transition {
                 }
             }
         }
+        @include breakpoints(medium) {
+            display: none;
+        }
         @include breakpoints(small) {
             display: none;
         }
@@ -1505,6 +1535,14 @@ transition {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include breakpoints(small) {
+                flex-direction: column;
+                gap: 15px;
+            }
+            @include breakpoints(mobile) {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
         .logo {
             max-width: 100%;
@@ -1517,7 +1555,19 @@ transition {
                 margin: 0;
                 color: #88898e;
                 font-size: 13px;
+                @include breakpoints(small) {
+                    font-size: 11px;
+                }
+                @include breakpoints(mobile) {
+                    font-size: 10px;
+                }
             }
+        }
+        @include breakpoints(small) {
+            padding: 15px;
+        }
+        @include breakpoints(mobile) {
+            padding: 15px;
         }
     }
 }
@@ -1526,34 +1576,22 @@ transition {
 
 .div {
     .circle {
-        position: relative;
         width: 100px;
         height: 100px;
-        background-color: $main-color;
-        color: $second-color;
+        line-height: 100px;
         border-radius: 50%;
-        border: 1px solid #232227;
-        margin: 2px;
+        text-align: center;
+        background: #000;
+        color: white;
+        font-size: 16px;
+        margin: 0 auto 40px;
+        border: 1px solid red;
+        margin: 20px auto ;
+        color: red;
         
         .fa-user {
-            position: absolute;
-            top: 50%;
-            transform: translate(0%, -50%);
-            left: 30px;
-            right: 23%;
-            margin: 0 auto;
-            font-size: 55px;
+            font-size: 40px;
+        }
            
-        }
-        &::after {
-            content: "";
-            top: 0;
-            height: 105px;
-            width: 105px;
-            background-color: #232227;
-            color: red;
-            border-radius: 50%;
-            border: 2px solid rgba($second-color, 0.5);
-        }
     }
 }
