@@ -1403,9 +1403,9 @@ transition {
 // Start Footer
 .footer {
     background: $second-color;
-    padding: 60px 0;
+    padding: 60px 0 0;
     .main {
-        padding: 20px 0;
+        padding: 20px 0 40px;
         h1 {
             font-size: 20px;
             font-weight: bold;
@@ -1431,6 +1431,129 @@ transition {
                     }
                 }
             }
+        }
+    }
+
+    .box-footer {
+        background: #2e303c;
+        width: 100%;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin: 60px 0;
+        .text {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+           padding: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+        h4 {
+            font-size: 17px;
+            color: $main-color;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            font-size: 17px;
+            margin: 0;
+            padding: 5px 0;
+            color: #fff;
+
+        }
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 50px;
+            align-items: center;
+            li {
+                padding: 0 7px;
+                color: #fff;
+                position: relative;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    background: #41434f ;
+                    right: 0;
+                }
+            }
+        }
+        @include breakpoints(small) {
+            display: none;
+        }
+        @include breakpoints(mobile) {
+            display: none;
+        }
+
+    }
+    .copyright {
+        background-color:#282a36;
+        padding: 30px 0;
+        
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            max-width: 100%;
+            img {
+                object-fit: contain;
+            }
+        }
+        .text {
+            p {
+                margin: 0;
+                color: #88898e;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+// End Footer
+
+.div {
+    .circle {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: $main-color;
+        color: $second-color;
+        border-radius: 50%;
+        border: 1px solid #232227;
+        margin: 2px;
+        
+        .fa-user {
+            position: absolute;
+            top: 50%;
+            transform: translate(0%, -50%);
+            left: 30px;
+            right: 23%;
+            margin: 0 auto;
+            font-size: 55px;
+           
+        }
+        &::after {
+            content: "";
+            top: 0;
+            height: 105px;
+            width: 105px;
+            background-color: #232227;
+            color: red;
+            border-radius: 50%;
+            border: 2px solid rgba($second-color, 0.5);
         }
     }
 }
