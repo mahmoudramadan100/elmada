@@ -27,7 +27,7 @@ a:hover {
   background-color: 0;
 }
 
-transition, .div .icon, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
+transition, .div .icon, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .text h3, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
 .up-navbar .right li a .icon, .up-navbar .left li a,
 .up-navbar .right li a {
   transition: 0.3s;
@@ -975,6 +975,9 @@ body.open .navbar-menu > a {
 }
 .services .box:hover .see-more {
   background-color: #ff6b6b;
+}
+.services .box:hover h3 {
+  color: #21232f;
 }
 
 .programe {
