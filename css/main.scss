@@ -1697,6 +1697,9 @@ body.open .navbar-menu > a {
             &:hover {
                 background: $second-color;
             }
+            @include breakpoints(large) {
+                left: -76%;
+            }
             @include breakpoints(medium) {
                 left: 0;
                 display: block;
