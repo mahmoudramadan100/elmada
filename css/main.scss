@@ -795,7 +795,7 @@ body.open .navbar-menu > a {
                 left: 0;
                 right: 0;
                 margin: 0 auto;
-                @include breakpoints(mobile) {
+                @include breakpoints(small) {
                     width: 50px;
                     height: 50px;
                 }
@@ -829,7 +829,7 @@ body.open .navbar-menu > a {
                 width: 565px;
             }
             @include breakpoints(mobile) {
-                width: 280px;
+                width: 90px;
             }
         }
         .text {
@@ -843,6 +843,10 @@ body.open .navbar-menu > a {
                 @extend transition;
                 @include breakpoints(medium) {
                     font-size: 14px;
+                }
+                @include breakpoints(mobile) {
+                    font-size: 14px;
+                    text-align: center;
                 }
             }
             p {
@@ -881,6 +885,7 @@ body.open .navbar-menu > a {
                     // right: 0;
                     padding: 5px 20px;
                     font-size: 11px;
+                    right: 30%;
                 }
             }
         }
@@ -893,6 +898,10 @@ body.open .navbar-menu > a {
             h3 {
                 color: $second-color;
             }
+        }
+        @include breakpoints(mobile) {
+            gap: 25px;
+            flex-direction: column;
         }
     }
 }
@@ -995,11 +1004,16 @@ body.open .navbar-menu > a {
                 }
                 @include breakpoints(mobile) {
                     font-size: 13px;
+                    text-align: center;
+                    margin-top: 15px;
                 }
             }
             p {
                 color: #3E3E40;
                 font-size: 13px;
+                @include breakpoints(mobile) {
+                    text-align: center;
+                }
             }
         }
         &:hover {
@@ -1029,6 +1043,10 @@ body.open .navbar-menu > a {
             background: #a4a2a7;
             bottom: -113px;
             right: 36px;
+            @include breakpoints(large) {
+                bottom: -97px;
+                right: 30px;
+            }
             @include breakpoints(medium) {
                 height: 71px;
                 bottom: -55px;
@@ -1045,6 +1063,10 @@ body.open .navbar-menu > a {
         }
         &:last-child::after {
             display: none;
+        }
+        @include breakpoints(mobile) {
+            display: flex;
+            flex-direction: column;
         }
     }
     .display-none {
@@ -1070,7 +1092,7 @@ body.open .navbar-menu > a {
 
         img {
             object-fit: contain;
-            width: 100%;
+            max-width: 100%;
         }
     }
 }
@@ -1584,6 +1606,11 @@ body.open .navbar-menu > a {
         .text {
             margin-right: 10px;
             width:375px;
+            @include breakpoints(mobile) {
+                margin: 0;
+                width: auto;
+                text-align: center;
+            }
             h5 {
                 color: $second-color;
                 font-size: 15px;
@@ -1691,13 +1718,17 @@ body.open .navbar-menu > a {
                 right: 45px;
             }
             @include breakpoints(small) {
-                // display: none;
-                right: 45px;
+                display: none;
             }
             @include breakpoints(mobile) {
-                // display: none;
-                right: 40px;
+                display: none;
+               
             }
+        }
+        @include breakpoints(mobile) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
     }
     // Form
@@ -2070,26 +2101,3 @@ body.open .navbar-menu > a {
 }
 
 // End Footer
-
-.div {
-    .icon {
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
-        border-radius: 50%;
-        text-align: center;
-        background: #000;
-        color: white;
-        font-size: 16px;
-        margin: 0 auto 40px;
-        border: 2px solid $gray-color;
-        margin: 20px auto;
-        display: flex;
-        @extend transition;
-
-        .icon-info {
-            font-size: 30px;
-            color: $second-color;
-        }
-    }
-}

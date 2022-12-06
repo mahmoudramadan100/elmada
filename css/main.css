@@ -27,7 +27,7 @@ a:hover {
   background-color: 0;
 }
 
-transition, .div .icon, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .text h3, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
+transition, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .services .box .text .see-more, .services .box .text h3, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
 .up-navbar .right li a .icon, .up-navbar .left li a,
 .up-navbar .right li a {
   transition: 0.3s;
@@ -871,7 +871,7 @@ body.open .navbar-menu > a {
   right: 0;
   margin: 0 auto;
 }
-@media (min-width: 0) and (max-width: 576px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .services .box .img img {
     width: 50px;
     height: 50px;
@@ -912,7 +912,7 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .services .box .img {
-    width: 280px;
+    width: 90px;
   }
 }
 .services .box .text {
@@ -928,6 +928,12 @@ body.open .navbar-menu > a {
 @media (min-width: 768px) and (max-width: 991px) {
   .services .box .text h3 {
     font-size: 14px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .services .box .text h3 {
+    font-size: 14px;
+    text-align: center;
   }
 }
 .services .box .text p {
@@ -967,6 +973,7 @@ body.open .navbar-menu > a {
   .services .box .text .see-more {
     padding: 5px 20px;
     font-size: 11px;
+    right: 30%;
   }
 }
 .services .box:hover {
@@ -978,6 +985,12 @@ body.open .navbar-menu > a {
 }
 .services .box:hover h3 {
   color: #21232f;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .services .box {
+    gap: 25px;
+    flex-direction: column;
+  }
 }
 
 .programe {
@@ -1099,11 +1112,18 @@ body.open .navbar-menu > a {
 @media (min-width: 0) and (max-width: 576px) {
   .programe .timeline .text h4 {
     font-size: 13px;
+    text-align: center;
+    margin-top: 15px;
   }
 }
 .programe .timeline .text p {
   color: #3E3E40;
   font-size: 13px;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .programe .timeline .text p {
+    text-align: center;
+  }
 }
 .programe .timeline:hover {
   cursor: pointer;
@@ -1138,6 +1158,12 @@ body.open .navbar-menu > a {
   bottom: -113px;
   right: 36px;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .programe .timeline::after {
+    bottom: -97px;
+    right: 30px;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .programe .timeline::after {
     height: 71px;
@@ -1159,6 +1185,12 @@ body.open .navbar-menu > a {
 }
 .programe .timeline:last-child::after {
   display: none;
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .programe .timeline {
+    display: flex;
+    flex-direction: column;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .programe .display-none {
@@ -1192,7 +1224,7 @@ body.open .navbar-menu > a {
 .programe .timeline-mobile img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 100%;
+  max-width: 100%;
 }
 
 .package .boxing {
@@ -1731,6 +1763,13 @@ body.open .navbar-menu > a {
   margin-right: 10px;
   width: 375px;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .contact .contact-info .text {
+    margin: 0;
+    width: auto;
+    text-align: center;
+  }
+}
 .contact .contact-info .text h5 {
   color: #21232f;
   font-size: 15px;
@@ -1853,12 +1892,19 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .contact .contact-info::before {
-    right: 45px;
+    display: none;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .contact .contact-info::before {
-    right: 40px;
+    display: none;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .contact .contact-info {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 .contact form {
@@ -2278,23 +2324,4 @@ body.open .navbar-menu > a {
   .footer .copyright {
     padding: 15px;
   }
-}
-
-.div .icon {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  border-radius: 50%;
-  text-align: center;
-  background: #000;
-  color: white;
-  font-size: 16px;
-  margin: 0 auto 40px;
-  border: 2px solid #a4a2a7;
-  margin: 20px auto;
-  display: flex;
-}
-.div .icon .icon-info {
-  font-size: 30px;
-  color: #21232f;
 }/*# sourceMappingURL=main.css.map */
