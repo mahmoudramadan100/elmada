@@ -1018,6 +1018,11 @@ body.open .navbar-menu > a {
   position: relative;
   display: inline-block;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .programe .timeline .icon {
+    height: 65px;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .programe .timeline .icon {
     width: 90px;
@@ -1045,6 +1050,11 @@ body.open .navbar-menu > a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .programe .timeline .icon .icons {
+    font-size: 25px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .programe .timeline .icon .icons {
@@ -1734,6 +1744,11 @@ body.open .navbar-menu > a {
   position: relative;
   display: inline-block;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .contact .contact-info .icon {
+    height: 65px;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .contact .contact-info .icon {
     width: 90px;
@@ -1761,6 +1776,11 @@ body.open .navbar-menu > a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .contact .contact-info .icon-info {
+    font-size: 22px;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .contact .contact-info .icon-info {

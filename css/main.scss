@@ -929,6 +929,9 @@ body.open .navbar-menu > a {
             background-color: $second-color;
             position: relative;
             display: inline-block;
+            @include breakpoints(large) {
+                height: 65px;
+            }
             @include breakpoints(medium) {
                 width: 90px;
                 height: 60px;
@@ -950,6 +953,9 @@ body.open .navbar-menu > a {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                @include breakpoints(large) {
+                    font-size: 25px;
+                }
                 @include breakpoints(medium) {
                     font-size: 18px;
                 }
@@ -1591,6 +1597,9 @@ body.open .navbar-menu > a {
             position: relative;
             display: inline-block;
             @extend transition;
+            @include breakpoints(large) {
+                height: 65px;
+            }
             @include breakpoints(medium) {
                 width: 90px;
                 height: 60px;
@@ -1614,6 +1623,9 @@ body.open .navbar-menu > a {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @include breakpoints(large) {
+                font-size: 22px;
+            }
             @include breakpoints(medium) {
                 font-size: 18px;
             }
