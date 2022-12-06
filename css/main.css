@@ -900,6 +900,11 @@ body.open .navbar-menu > a {
 .services .box .img::after:hover {
   border: 1px solid #ff6b6b;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .services .box .img {
+    width: 325px;
+  }
+}
 @media (min-width: 768px) and (max-width: 991px) {
   .services .box .img {
     width: 565px;

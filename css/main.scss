@@ -822,6 +822,9 @@ body.open .navbar-menu > a {
                     border: 1px solid $main-color;
                 }
             }
+            @include breakpoints(large) {
+                width: 325px;
+            }
             @include breakpoints(medium) {
                 width: 565px;
             }
