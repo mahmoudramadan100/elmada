@@ -1590,6 +1590,9 @@ body.open .navbar-menu > a {
                 height: 100%;
                 background: #e0e0e0;
                 left: -35px;
+                @include breakpoints(mobile) {
+                    display: none;
+                }
             }
         }
         .swiper-wrapper {

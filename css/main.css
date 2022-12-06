@@ -1753,6 +1753,11 @@ body.open .navbar-menu > a {
   background: #e0e0e0;
   left: -35px;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .network-section .network .img::after {
+    display: none;
+  }
+}
 .network-section .network .swiper-wrapper {
   padding-bottom: 80px;
 }
