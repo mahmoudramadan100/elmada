@@ -668,6 +668,7 @@ body.open .navbar-menu > a {
                 margin: 80px 60px 70px;
             }
             @include breakpoints(mobile) {
+                letter-spacing: auto;
                 font-size: 15px;
                 margin: 80px 50px 70px;
             }

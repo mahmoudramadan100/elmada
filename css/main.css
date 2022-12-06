@@ -735,6 +735,7 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .slider .text h1 {
+    letter-spacing: auto;
     font-size: 15px;
     margin: 80px 50px 70px;
   }
