@@ -29,6 +29,7 @@ body {
     box-sizing: border-box;
     text-align: right;
     direction: rtl;
+    height: 50000px;
 }
 a {
     text-decoration: none;
@@ -36,11 +37,6 @@ a {
         text-decoration: none;
     }
 }
-.panel-heading.active  {
-    background-color: red($color: #000000);
-}
-
-
 transition {
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -55,38 +51,14 @@ transition {
 .swiper-pagination {
     text-align: left !important;
     .swiper-pagination-bullet-active {
-        background: $second-color;
+       background: $second-color;
     }
     .swiper-pagination-bullet {
         width: 12px;
         height: 12px;
         @include breakpoints(small) {
-            width: 10px;
-            height: 10px;
-        }
-        @include breakpoints(mobile) {
-            width: 10px;
-            height: 10px;
-        }
-    }
-    @include breakpoints(small) {
-        text-align: center !important;
-    }
-    @include breakpoints(mobile) {
-        text-align: center !important;
-    }
-}
-.swiper-pagination-1 {
-    text-align: left !important;
-    .swiper-pagination-bullet-active {
-        background: $main-color;
-    }
-    .swiper-pagination-bullet {
-        width: 12px;
-        height: 12px;
-        @include breakpoints(small) {
-            width: 10px;
-            height: 10px;
+           width: 10px;
+           height: 10px;
         }
         @include breakpoints(mobile) {
             width: 10px;
@@ -282,7 +254,7 @@ transition {
                 content: "";
                 position: absolute;
                 width: 10px;
-                left: -9px;
+                left: -10px;
                 height: 10px;
                 z-index: 99;
                 background-color: #21232f;
@@ -319,77 +291,7 @@ transition {
 
 }
 // End Up-Navbar
-// Navbar Mobile {
-body.open .background {
-    filter: blur(20px);
-}
-body.open .navbar-burger {
-    background-image: url("../img/close.png");
-}
 
-.navbar-menu {
-    @include breakpoints(small) {
-        z-index: 2;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.5s;
-    }
-    @include breakpoints(mobile) {
-        z-index: 2;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 32px;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.5s;
-    }
-}
-body.open .navbar-menu {
-    opacity: 1;
-    visibility: visible;
-    position: fixed;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 25px;
-}
-
-.navbar-menu > a {
-    color: #f9f9f9;
-    font-size: 32px;
-    font-family: "Euclid Circular A";
-    text-decoration: none;
-}
-
-body.open .navbar-menu > a {
-    animation: appear 0.3s both;
-}
-
-@keyframes appear {
-    0% {
-        opacity: 0;
-        translate: 0 50px;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 /**
  *
  * Start Navbar
@@ -453,43 +355,12 @@ body.open .navbar-menu > a {
                 @include breakpoints(medium) {
                     font-size: 13px;
                 }
-                @include breakpoints(small) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-items: center;
-                    align-items: center;
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 15px;
-                    gap: 0;
-                }
-                @include breakpoints(mobile) {
-                    display: flex;
-                    flex-direction: row;
-                    justify-items: center;
-                    align-items: center;
-                    color: #fff;
-                    text-decoration: none;
-                    font-size: 15px;
-                    gap: 0;
-                }
             }
             &:hover {
                 color: #fff;
                 background-color: $main-color;
                 border-bottom: 2px solid $main-color-alt;
                 text-decoration: none;
-                @include breakpoints(small) {
-                    border-bottom: none;
-                    background-color: transparent;
-                    color: $main-color;
-                }
-                @include breakpoints(mobile) {
-                    border-bottom: none;
-                    background-color: transparent;
-                    color: $main-color;
-
-                }
             }
             &:last-child {
                 border-left: 1px solid transparent;
@@ -497,107 +368,16 @@ body.open .navbar-menu > a {
             &:hover a {
                 color: #fff;
             }
-            .icon {
-                @include breakpoints(small) {
-                    margin: 0 20px;
-                }
-                @include breakpoints(mobile) {
-                    margin: 0 20px;
-                }
-
-            }
             @include breakpoints(medium) {
                 height: 70px;
             }
-            @include breakpoints(small) {
-                padding: 5px 0;
-                text-align: center;
-                height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: none;
-                border-left: none;
-                border-right: none;
-                cursor: pointer;
-                color: #fff;
-            }
-            @include breakpoints(mobile) {
-                padding: 5px 0;
-                text-align: center;
-                height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-bottom: none;
-                border-left: none;
-                border-right: none;
-                cursor: pointer;
-                color: #fff;
-            }
         }
-        // @include breakpoints(small) {
-        //     display: none;
-        // }
-        // @include breakpoints(mobile) {
-        //     display: none;
-        // }
-    }
-    button {
-        display: none !important;
         @include breakpoints(small) {
-            border: 0;
-            padding: 0;
-            background: transparent;
-            cursor: pointer;
-            display: inline-block !important;
-            font-size: 28px;
+            display: none;
         }
         @include breakpoints(mobile) {
-            border: 0;
-            padding: 0;
-            background: transparent;
-            cursor: pointer;
-            display: inline-block !important;
-            font-size: 28px;
+            display: none;
         }
-        &:foucs {
-            outline: none;
-            border: none;
-        }
-    }
-    .navbar-burger {
-        outline: none;
-        z-index: 3;
-        top: 0;
-        right: 0;
-        display: grid;
-        place-items: center;
-        width: 72px;
-        height: 72px;
-        background-image: url("../img/menu.png");
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-    @include breakpoints(Mobile) {
-        z-index: 1;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        height: 72px;
-        padding-left: 20px;
-        padding-right: 72px;
-        background: #19191c;
-        color: #f9f9f9;
-    }
-    @include breakpoints(small) {
-        height: 70px;
-    }
-    @include breakpoints(mobile) {
-        height: 70px;
     }
 }
 .navbar-scroll {
@@ -807,6 +587,7 @@ body.open .navbar-menu > a {
                 -o-border-radius: 50%;
                 width: 100px;
                 height: 100px;
+               
                 border: 1px solid #a4a2a7;
                 cursor: pointer;
                 @extend transition;
@@ -814,24 +595,15 @@ body.open .navbar-menu > a {
                     border: 1px solid $main-color;
                 }
             }
-            @include breakpoints(medium) {
-                width: 565px;
-            }
-            @include breakpoints(mobile) {
-                width: 330px;
-            }
         }
         .text {
             padding: 0 15px;
             h3 {
-                font-size: 15px;
+                font-size: 16px;
                 text-align: right;
                 color: $main-color;
                 font-weight: bold;
                 margin-bottom: 15px;
-                @include breakpoints(medium) {
-                    font-size: 14px;
-                }
             }
             p {
                 font-size: 12px;
@@ -855,15 +627,6 @@ body.open .navbar-menu > a {
                 &:hover {
                     background-color: $main-color;
                 }
-                @include breakpoints(medium) {
-                    right: 45%;
-                }
-                @include breakpoints(small) {
-                    right: 0;
-                }
-                @include breakpoints(mobile) {
-                    right: 0;
-                }
             }
         }
         &:hover {
@@ -886,14 +649,8 @@ body.open .navbar-menu > a {
         flex-direction: column;
         justify-content: space-around;
         margin: 30px 0;
-        @include breakpoints(small) {
-            margin: 7px 0;
         }
-        @include breakpoints(mobile) {
-            margin: 7px 0;
-        }
-    }
-
+        
     .timeline {
         display: flex;
         flex-direction: row;
@@ -902,7 +659,6 @@ body.open .navbar-menu > a {
         .icon {
             border: 2px solid $gray-color;
             width: 130px;
-            overflow: hidden;
             height: 80px;
             border-radius: 50%;
             -webkit-border-radius: 50%;
@@ -911,37 +667,17 @@ body.open .navbar-menu > a {
             -o-border-radius: 50%;
             background-color: $second-color;
             position: relative;
-            display: inline-block;
-            @include breakpoints(medium) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include breakpoints(mobile){
                 width: 90px;
-                height: 60px;
-            }
-            @include breakpoints(small) {
-                width: 115px;
-                height: 50px;
-            }
-            @include breakpoints(mobile) {
-                width: 50px;
-                height: 50px;
             }
             .icons {
                 color: $main-color;
                 text-align: center;
                 margin: 0 auto;
                 font-size: 35px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                @include breakpoints(medium) {
-                    font-size: 18px;
-                }
-                @include breakpoints(small) {
-                    font-size: 17px;
-                }
-                @include breakpoints(mobile) {
-                    font-size: 16px;
-                }
             }
             &::after {
                 content: "";
@@ -950,16 +686,6 @@ body.open .navbar-menu > a {
                 width: 2px;
                 background: $gray-color;
                 bottom: -110px;
-                @include breakpoints(medium) {
-                    height: 35px;
-                    bottom: -35px;
-                }
-                @include breakpoints(small) {
-                    display: none;
-                }
-                @include breakpoints(mobile) {
-                    display: none;
-                }
             }
         }
         .last-icon {
@@ -973,17 +699,11 @@ body.open .navbar-menu > a {
             h4 {
                 font-size: 15px;
                 font-weight: bold;
-                margin-bottom: 15px;
+                margin-bottom:15px;
                 color: $main-color;
                 @extend transition;
                 &:hover {
                     color: $second-color;
-                }
-                @include breakpoints(small) {
-                    font-size: 13px;
-                }
-                @include breakpoints(mobile) {
-                    font-size: 13px;
                 }
             }
             p {
@@ -1000,40 +720,14 @@ body.open .navbar-menu > a {
                 color: $second-color;
             }
         }
-        @include breakpoints(medium) {
-            margin: 20px 0;
-        }
-        @include breakpoints(small) {
-            margin: 10px 0;
-        }
-        @include breakpoints(mobile) {
-            margin: 10px 0;
-        }
-    }
-    .display-none {
-        @include breakpoints(medium) {
-            display: none !important;
-        }
-        @include breakpoints(small) {
-            display: none !important;
-        }
-        @include breakpoints(mobile) {
-            display: none !important;
-        }
     }
     .timeline-mobile {
         max-width: 100%;
-        margin: 0 auto;
         @include breakpoints(small) {
-            display: none !important;
+            display: none;
         }
         @include breakpoints(mobile) {
-            display: none !important;
-        }
-
-        img {
-            object-fit: contain;
-            width: 100%;
+            display: none;
         }
     }
 }
@@ -1066,7 +760,7 @@ body.open .navbar-menu > a {
                     align-items: center;
                     justify-content: center;
                     color: #fff;
-                    background: rgba($second-color, 0.8) url("../img/slic.png") no-repeat;
+                    background: rgba($second-color, 0.8) url(../img/slic.png) no-repeat;
                     background-size: cover;
                     height: 100%;
                     width: 65%;
@@ -1097,15 +791,12 @@ body.open .navbar-menu > a {
                         display: block;
                         font-size: 13px;
                         padding: 0 4px;
-                        @include breakpoints(medium) {
-                            font-size: 12px;
-                        }
                     }
                 }
             }
             &:hover {
                 .name {
-                    background: rgba($main-color, 0.8) url("../img/slic.png") no-repeat;
+                    background: rgba($main-color, 0.8) url(../img/slic.png) no-repeat;
                     background-size: cover;
                 }
                 &::before {
@@ -1113,7 +804,7 @@ body.open .navbar-menu > a {
                     background-color: $second-color;
                 }
             }
-
+            
             .body {
                 display: flex;
                 height: 140px;
@@ -1182,43 +873,43 @@ body.open .navbar-menu > a {
                 background-color: $main-color;
                 top: -7px;
                 @extend transition;
-            }
-            .buy-now {
-                background-color: #f8f8f8;
-                width: 100%;
-                padding: 8px 0;
-                margin: 7px 0;
-                text-align: center;
-                color: $main-color;
-                font-size: 14px;
-                display: flex;
-                justify-content: center;
-                @extend transition;
-                &:hover {
-                    background-color: $main-color;
-                    color: $second-color;
-                    font-weight: bold;
-                    .sms-price {
-                        &:after {
-                            content: "";
-                            position: absolute;
-                            height: 100%;
-                            width: 1px;
-                            background-color: $gray-color;
-                            top: 0;
-                            right: 0;
-                        }
+        }
+        .buy-now {
+            background-color: #f8f8f8;
+            width: 100%;
+            padding: 8px 0;
+            margin: 7px 0;
+            text-align: center;
+            color: $main-color;
+            font-size: 14px;
+            display: flex;
+            justify-content: center;
+            @extend transition;
+            &:hover {
+                background-color: $main-color;
+                color: $second-color;
+                font-weight: bold;
+                .sms-price {
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        height: 100%;
+                        width: 1px;
+                        background-color: $gray-color;
+                        top: 0;
+                        right: 0;
                     }
                 }
             }
-            @include breakpoints(small) {
-                width: 250px;
-                margin: 0 auto;
-            }
-            @include breakpoints(mobile) {
-                width: 250px;
-                margin: 0 auto;
-            }
+        }
+        @include breakpoints(small){
+            width: 250px;
+            margin: 0 auto;
+        }
+        @include breakpoints(mobile){
+            width: 250px;
+            margin: 0 auto;
+         }
         }
     }
 }
@@ -1226,7 +917,7 @@ body.open .navbar-menu > a {
 // Start Info 
 .info {
     margin: 20px 0;
-    background-image: url("../img/bg-clnt.png");
+    background-image: url(../img/bg-clnt.png);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 60px 0;
@@ -1236,11 +927,11 @@ body.open .navbar-menu > a {
         @include breakpoints(small) {
             order: 2;
             justify-content: center;
-        }
-        @include breakpoints(mobile) {
-            order: 2;
-            justify-content: center;
-        }
+           }
+       @include breakpoints(mobile) {
+        order: 2;
+        justify-content: center;
+       }
     }
     .box {
         max-height: 140px;
@@ -1262,7 +953,7 @@ body.open .navbar-menu > a {
             align-items: center;
             @include breakpoints(medium) {
                 font-size: 13px;
-                font-weight: 300;
+                font-weight:300;
             }
         }
         .bg-color {
@@ -1301,7 +992,7 @@ body.open .navbar-menu > a {
         background-color: #fff;
         margin-bottom: 0;
         h3 {
-            margin: 0 0 5px;
+            margin: 0 0 5px 0;
             font-size: 25px;
             color: $second-color;
             font-weight: bold;
@@ -1341,11 +1032,11 @@ body.open .navbar-menu > a {
             color: $main-color;
             margin: 5px 0;
             font-weight: bold;
-            @include breakpoints(small) {
+            @include breakpoints(small){
                 font-size: 15px;
                 text-align: center;
             }
-            @include breakpoints(mobile) {
+            @include breakpoints(mobile){
                 font-size: 15px;
                 text-align: center;
             }
@@ -1355,11 +1046,11 @@ body.open .navbar-menu > a {
             font-size: 14px;
             color: $gray-color;
             margin-bottom: 3px;
-            @include breakpoints(small) {
+            @include breakpoints(small){
                 font-size: 12px;
                 text-align: center;
             }
-            @include breakpoints(mobile) {
+            @include breakpoints(mobile){
                 font-size: 12px;
                 text-align: center;
             }
@@ -1377,9 +1068,9 @@ body.open .navbar-menu > a {
             margin-left: 20px;
             @include breakpoints(medium) {
                 width: 100%;
-                display: block;
-                float: none;
-                margin-bottom: 20px;
+               display: block;
+               float: none;
+               margin-bottom: 20px;
             }
         }
         p {
@@ -1387,26 +1078,11 @@ body.open .navbar-menu > a {
             font-size: 13px;
             line-height: 1.8;
             margin-bottom: 20px;
-            @include breakpoints(medium) {
+            @include breakpoints(mobile) {
                 font-size: 12px;
-                width: 100%;
-                max-height: 240px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            @include breakpoints(small) {
-                font-size: 12px;
-                width: 100%;
-                max-height: 240px;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
             @include breakpoints(mobile) {
                 font-size: 11px;
-                width: 100%;
-                max-height: 240px;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
         }
     }
@@ -1426,18 +1102,14 @@ body.open .navbar-menu > a {
         @extend transition;
         &:hover {
             background-color: $second-color;
+            color: $main-color;
         }
-        @include breakpoints(medium) {
+        @include breakpoints(small){
             margin: 0 auto;
             left: auto;
             display: block;
         }
-        @include breakpoints(small) {
-            margin: 0 auto;
-            left: auto;
-            display: block;
-        }
-        @include breakpoints(mobile) {
+        @include breakpoints(mobile){
             margin: 0 auto;
             left: auto;
             display: block;
@@ -1480,14 +1152,14 @@ body.open .navbar-menu > a {
             line-height: 1.8;
             box-shadow: none;
         }
-        @include breakpoints(mobile) {
+        @include breakpoints(mobile){
             padding: 20px 0;
         }
     }
-    @include breakpoints(small) {
+    @include breakpoints(small){
         margin: 30px 0;
     }
-    @include breakpoints(mobile) {
+    @include breakpoints(mobile){
         margin: 30px 0;
     }
 }
@@ -1525,10 +1197,10 @@ body.open .navbar-menu > a {
         }
         .swiper-pagination-bullet-active {
             background: $main-color;
-        }
-        .swiper-pagination {
+         }
+         .swiper-pagination {
             position: fixed;
-        }
+         }
     }
 }
 // End Network
@@ -1536,13 +1208,10 @@ body.open .navbar-menu > a {
 .contact {
     padding: 10px 0 40px;
     .contact-info {
-        margin: 15px 0;
-        padding: 20px;
         display: flex;
-        gap: 10px;
+        margin: 50px 0;
         .text {
-            margin-right: 10px;
-            width:330px;
+            margin-right: 20px;
             h5 {
                 color: $second-color;
                 font-size: 15px;
@@ -1561,51 +1230,27 @@ body.open .navbar-menu > a {
             }
         }
         .icon {
-            border: 2px solid #a4a2a7;
-            width: 130px;
-            overflow: hidden;
-            height: 80px;
+            width: 75px;
+            height: 75px;
+            display: flex;
+            border: 2px solid $gray-color;
             border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            background-color: $main-color;
-            position: relative;
-            display: inline-block;
-            @extend transition;
-            @include breakpoints(medium) {
-                width: 90px;
-                height: 60px;
-            }
-            @include breakpoints(small) {
-                width: 50px;
-                height: 50px;
-            }
-            @include breakpoints(mobile) {
-                width: 50px;
-                height: 50px;
-            }
+            @extend transition
             
         }
         .icon-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: $second-color;
-            text-align: center;
-            margin: 0 auto;
-            font-size: 35px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            @include breakpoints(medium) {
-                font-size: 18px;
-            }
-            @include breakpoints(small) {
-                font-size: 17px;
-            }
-            @include breakpoints(mobile) {
-                font-size: 16px;
-            }
+            background-color: $main-color;
+            padding: 25px;
+            line-height: 15px;
+            font-size: 25px;
+            border-radius: 50%;
+            height: 20px;
+            width: 20px;
+            overflow: hidden;
         }
         &:hover {
             .icon {
@@ -1616,7 +1261,7 @@ body.open .navbar-menu > a {
                 color: $main-color;
                 cursor: pointer;
             }
-
+            
         }
     }
     // Form
@@ -1654,7 +1299,7 @@ body.open .navbar-menu > a {
         }
         .btn-send {
             position: relative;
-            left: -77%;
+            left: -80%;
             padding: 7px 5px;
             width: 150px;
             color: #fff;
@@ -1668,28 +1313,13 @@ body.open .navbar-menu > a {
             &:hover {
                 background: $second-color;
             }
-            @include breakpoints(medium) {
-                left: 0;
-                display: block;
-                margin: 0 auto;
-            }
-            @include breakpoints(small) {
-                left: 0;
-                display: block;
-                margin: 0 auto;
-            }
-            @include breakpoints(mobile) {
-                left: 0;
-                display: block;
-                margin: 0 auto;
-            }
         }
     }
 }
 // End Contact
 // Start Up-footer
 .up-footer {
-    padding: 0;
+    padding: 0 ;
     background-color: $main-color;
     overflow: hidden;
     .flex {
@@ -1704,24 +1334,14 @@ body.open .navbar-menu > a {
             width: 1px;
             height: 100%;
             background: #ff8984;
-            @include breakpoints(medium) {
-                display: none;
-            }
-            @include breakpoints(small) {
-                display: none;
-            }
-            @include breakpoints(mobile) {
-                display: none;
-            }
-        }
-        @include breakpoints(small) {
-            justify-content: center;
         }
         @include breakpoints(mobile) {
-            justify-content: center;
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+            }
         }
     }
-
     .social {
         display: flex;
         align-items: center;
@@ -1741,13 +1361,13 @@ body.open .navbar-menu > a {
                 color: #fff;
                 background-color: #d05158;
                 border-radius: 50%;
-                @extend transition;
+                @extend transition ;
                 &:hover {
                     background: $second-color;
                 }
             }
         }
-
+        
     }
     .subscribe {
         display: flex;
@@ -1779,47 +1399,21 @@ body.open .navbar-menu > a {
             color: $second-color !important;
             font-size: 13px;
             padding: 5px 7px;
-        }
-
-        .btn-sub {
-            background: $second-color;
-            margin: 0 5px;
-            text-align: center;
-            padding: 6px;
-            width: 120px;
-            color: #fff;
-            @extend transition;
-            &:hover {
-                background: #d05158;
-            }
-        }
-        @include breakpoints(medium) {
-            flex-direction: column;
-            gap: 10px;
-        }
-        @include breakpoints(small) {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            gap: 15px;
-            justify-content: space-between;
-            flex-direction: column;
-        }
-        @include breakpoints(mobile) {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            gap: 15px;
-            justify-content: space-between;
-            flex-direction: column;
+         }
+    
+    .btn-sub {
+        background: $second-color;
+        margin: 0 5px;
+        text-align: center;
+        padding: 6px;
+        width: 120px;
+        color: #fff;
+        @extend transition;
+        &:hover {
+            background: #d05158;
         }
     }
-    @include breakpoints(small) {
-        padding: 20px 0;
-    }
-    @include breakpoints(mobile) {
-        padding: 20px 0;
-    }
+}
 }
 // End Up-Footer
 // Start Footer
@@ -1884,7 +1478,7 @@ body.open .navbar-menu > a {
             text-align: center;
             display: flex;
             flex-direction: column;
-            padding: 15px;
+           padding: 15px;
             align-items: center;
             justify-content: center;
         }
@@ -1921,7 +1515,7 @@ body.open .navbar-menu > a {
                     position: absolute;
                     width: 1px;
                     height: 100%;
-                    background: #41434f;
+                    background: #41434f ;
                     right: 0;
                 }
             }
@@ -1938,9 +1532,9 @@ body.open .navbar-menu > a {
 
     }
     .copyright {
-        background-color: #282a36;
+        background-color:#282a36;
         padding: 30px 0;
-
+        
         .container {
             display: flex;
             justify-content: space-between;
@@ -1985,7 +1579,7 @@ body.open .navbar-menu > a {
 // End Footer
 
 .div {
-    .icon {
+    .circle {
         width: 100px;
         height: 100px;
         line-height: 100px;
@@ -1995,14 +1589,13 @@ body.open .navbar-menu > a {
         color: white;
         font-size: 16px;
         margin: 0 auto 40px;
-        border: 2px solid $gray-color;
-        margin: 20px auto;
-        display: flex;
-        @extend transition;
-
-        .icon-info {
-            font-size: 30px;
-            color: $second-color;
+        border: 1px solid red;
+        margin: 20px auto ;
+        color: red;
+        
+        .fa-user {
+            font-size: 40px;
         }
+           
     }
 }
