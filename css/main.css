@@ -879,8 +879,8 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .services .box .img img {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
 }
 .services .box .img::after {
@@ -900,6 +900,12 @@ body.open .navbar-menu > a {
 .services .box .img::after:hover {
   border: 1px solid #ff6b6b;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .services .box .img::after {
+    width: 80px;
+    height: 80px;
+  }
+}
 @media (min-width: 992px) and (max-width: 1200px) {
   .services .box .img {
     width: 325px;
@@ -912,7 +918,8 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .services .box .img {
-    width: 90px;
+    width: 70px;
+    height: 70px;
   }
 }
 .services .box .text {

@@ -800,8 +800,8 @@ body.open .navbar-menu > a {
                     height: 50px;
                 }
                 @include breakpoints(mobile) {
-                    width: 45px;
-                    height: 45px;
+                    width: 35px;
+                    height: 35px;
                 }
             }
             &::after {
@@ -821,6 +821,10 @@ body.open .navbar-menu > a {
                 &:hover {
                     border: 1px solid $main-color;
                 }
+                @include breakpoints(mobile) {
+                    width: 80px;
+                    height: 80px;
+                }
             }
             @include breakpoints(large) {
                 width: 325px;
@@ -829,7 +833,8 @@ body.open .navbar-menu > a {
                 width: 565px;
             }
             @include breakpoints(mobile) {
-                width: 90px;
+                width: 70px;
+                height: 70px;
             }
         }
         .text {
