@@ -1760,6 +1760,9 @@ body.open .navbar-menu > a {
         position: relative;
         li {
             padding: 0 5px;
+            @include breakpoints(large) {
+                padding: 0 3px;
+            }
             .icon {
                 padding: 12px;
                 line-height: 8px;

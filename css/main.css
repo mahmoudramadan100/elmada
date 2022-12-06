@@ -1930,6 +1930,11 @@ body.open .navbar-menu > a {
 .up-footer .social li {
   padding: 0 5px;
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .up-footer .social li {
+    padding: 0 3px;
+  }
+}
 .up-footer .social li .icon {
   padding: 12px;
   line-height: 8px;
