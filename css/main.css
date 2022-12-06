@@ -1555,6 +1555,7 @@ body.open .navbar-menu > a {
     max-height: 240px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 15px 0 10px;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -1564,6 +1565,7 @@ body.open .navbar-menu > a {
     max-height: 240px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 15px 0 10px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
@@ -1573,6 +1575,7 @@ body.open .navbar-menu > a {
     max-height: 240px;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 15px 0 10px;
   }
 }
 .about-us .read-more {

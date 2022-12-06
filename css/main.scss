@@ -1420,6 +1420,7 @@ body.open .navbar-menu > a {
                 max-height: 240px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                padding: 15px 0 10px;
             }
             @include breakpoints(small) {
                 font-size: 12px;
@@ -1427,6 +1428,7 @@ body.open .navbar-menu > a {
                 max-height: 240px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                padding: 15px 0 10px;
             }
             @include breakpoints(mobile) {
                 font-size: 11px;
@@ -1434,6 +1436,7 @@ body.open .navbar-menu > a {
                 max-height: 240px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                padding: 15px 0 10px;
             }
         }
     }
