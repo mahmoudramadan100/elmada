@@ -1602,7 +1602,7 @@ body.open .navbar-menu > a {
   .about-us .about-text p {
     font-size: 12px;
     width: 100%;
-    max-height: 240px;
+    max-height: 241px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 15px 0 10px;
@@ -1612,10 +1612,17 @@ body.open .navbar-menu > a {
   .about-us .about-text p {
     font-size: 11px;
     width: 100%;
-    max-height: 240px;
+    max-height: 237px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 15px 0 10px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .about-us .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .about-us .read-more {
