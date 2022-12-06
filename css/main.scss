@@ -1567,9 +1567,10 @@ body.open .navbar-menu > a {
         padding: 20px;
         display: flex;
         gap: 10px;
+        position: relative;
         .text {
             margin-right: 10px;
-            width:330px;
+            width:375px;
             h5 {
                 color: $second-color;
                 font-size: 15px;
@@ -1588,10 +1589,8 @@ body.open .navbar-menu > a {
             }
         }
         .icon {
-            border: 2px solid #a4a2a7;
-            width: 130px;
-            overflow: hidden;
-            height: 80px;
+            width: 115px;
+            height: 70px;
             border-radius: 50%;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -1616,13 +1615,26 @@ body.open .navbar-menu > a {
                 width: 50px;
                 height: 50px;
             }
-            
+            &::after {
+                content: "";
+                content: "";
+                position: absolute;
+                width: 110%;
+                height: 110%;
+                background-color: transparent;
+                border: 1px solid #a4a2a7;
+                top: 0;
+                left: 0;
+                border-radius: 50%;
+                margin: 0 auto;
+                transform: translate(-3%, -4%);
+            }
         }
         .icon-info {
             color: $second-color;
             text-align: center;
             margin: 0 auto;
-            font-size: 35px;
+            font-size: 30px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1642,7 +1654,6 @@ body.open .navbar-menu > a {
         }
         &:hover {
             .icon {
-                border: 2px solid $second-color;
                 cursor: pointer;
             }
             h5 {
@@ -1650,6 +1661,30 @@ body.open .navbar-menu > a {
                 cursor: pointer;
             }
 
+        }
+        &::before {
+            content: "";
+            width: 2px;
+            height: 135px;
+            background: #d6d6d6;
+            position: absolute;
+            top: 0;
+            right: 53px;
+            @include breakpoints(large) {
+                right: 45px;
+                height: 147px;
+            }
+            @include breakpoints(medium) {
+                right: 45px;
+            }
+            @include breakpoints(small) {
+                // display: none;
+                right: 45px;
+            }
+            @include breakpoints(mobile) {
+                // display: none;
+                right: 40px;
+            }
         }
     }
     // Form
