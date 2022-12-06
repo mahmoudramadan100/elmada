@@ -907,6 +907,7 @@ body.open .navbar-menu > a {
         flex-direction: column;
         justify-content: space-around;
         margin: 30px 0;
+        position: relative;
         @include breakpoints(small) {
             margin: 7px 0;
         }
@@ -969,25 +970,8 @@ body.open .navbar-menu > a {
                 @include breakpoints(mobile) {
                     font-size: 16px;
                 }
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                height: 110px;
-                width: 2px;
-                background: $gray-color;
-                bottom: -110px;
-                @include breakpoints(medium) {
-                    height: 35px;
-                    bottom: -35px;
-                }
-                @include breakpoints(small) {
-                    display: none;
-                }
-                @include breakpoints(mobile) {
-                    display: none;
-                }
-            }
+           
+        }
         }
         .last-icon {
             &::after {
@@ -1035,6 +1019,32 @@ body.open .navbar-menu > a {
         }
         @include breakpoints(mobile) {
             margin: 10px 0;
+        }
+         
+        &::after {
+            content: "";
+            position: absolute;
+            height: 119px;
+            width: 2px;
+            background: #a4a2a7;
+            bottom: -113px;
+            right: 36px;
+            @include breakpoints(medium) {
+                height: 71px;
+                bottom: -55px;
+                right: 26px;
+            }
+            @include breakpoints(small) {
+                height: 82px;
+                bottom: -55px;
+                right: 23px;
+            }
+            @include breakpoints(mobile) {
+                display: none;
+            }
+        }
+        &:last-child::after {
+            display: none;
         }
     }
     .display-none {

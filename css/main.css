@@ -990,6 +990,7 @@ body.open .navbar-menu > a {
   flex-direction: column;
   justify-content: space-around;
   margin: 30px 0;
+  position: relative;
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .programe .flex {
@@ -1074,30 +1075,6 @@ body.open .navbar-menu > a {
     font-size: 16px;
   }
 }
-.programe .timeline .icon::after {
-  content: "";
-  position: absolute;
-  height: 110px;
-  width: 2px;
-  background: #a4a2a7;
-  bottom: -110px;
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  .programe .timeline .icon::after {
-    height: 35px;
-    bottom: -35px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  .programe .timeline .icon::after {
-    display: none;
-  }
-}
-@media (min-width: 0) and (max-width: 576px) {
-  .programe .timeline .icon::after {
-    display: none;
-  }
-}
 .programe .timeline .last-icon::after {
   content: "";
   display: none !important;
@@ -1151,6 +1128,37 @@ body.open .navbar-menu > a {
   .programe .timeline {
     margin: 10px 0;
   }
+}
+.programe .timeline::after {
+  content: "";
+  position: absolute;
+  height: 119px;
+  width: 2px;
+  background: #a4a2a7;
+  bottom: -113px;
+  right: 36px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .programe .timeline::after {
+    height: 71px;
+    bottom: -55px;
+    right: 26px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .programe .timeline::after {
+    height: 82px;
+    bottom: -55px;
+    right: 23px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .programe .timeline::after {
+    display: none;
+  }
+}
+.programe .timeline:last-child::after {
+  display: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .programe .display-none {
