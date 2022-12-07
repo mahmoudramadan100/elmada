@@ -878,7 +878,7 @@ body.open .navbar-menu > a {
         .text {
             padding: 0 15px;
             h3 {
-                font-size: 15px;
+                font-size: 14px;
                 text-align: right;
                 color: $main-color;
                 font-weight: bold;
@@ -1009,7 +1009,7 @@ body.open .navbar-menu > a {
         align-items: center;
         position: relative;
         .icon {
-            border: 2px solid #dedede;
+            border: 3px solid #dfdfdf;
             width: 130px;
             overflow: hidden;
             height: 80px;
@@ -1021,7 +1021,7 @@ body.open .navbar-menu > a {
             background-color: $second-color;
             position: relative;
             display: inline-block;
-            box-shadow: -1px 1px 6px 1px #dedede;
+            // box-shadow: -1px 1px 6px 1px #dfdfdf;
             @extend transition;
             @include breakpoints(large) {
                 height: 65px;
@@ -1104,8 +1104,8 @@ body.open .navbar-menu > a {
         &:hover {
             cursor: pointer;
             .icon {
-                border: 2px solid $main-color;
-                box-shadow: -1px 1px 6px 1px $main-color;
+                border: 3px solid $main-color;
+                // box-shadow: -1px 1px 6px 1px $main-color-alt;
             }
             h4 {
                 color: $second-color;
@@ -1126,7 +1126,7 @@ body.open .navbar-menu > a {
             position: absolute;
             height: 119px;
             width: 2px;
-            background: #a4a2a7;
+            background: #dfdfdf;
             bottom: -113px;
             right: 40px;
             @include breakpoints(large) {
@@ -1544,6 +1544,10 @@ body.open .navbar-menu > a {
             color: $main-color;
             margin: 5px 0;
             font-weight: bold;
+            @include breakpoints(medium) {
+                font-size: 15px;
+                text-align: right;
+            }
             @include breakpoints(small) {
                 font-size: 15px;
                 text-align: center;
@@ -1558,6 +1562,10 @@ body.open .navbar-menu > a {
             font-size: 14px;
             color: $gray-color;
             margin-bottom: 3px;
+            @include breakpoints(small) {
+                font-size: 12px;
+                text-align: right;
+            }
             @include breakpoints(small) {
                 font-size: 12px;
                 text-align: center;
@@ -1695,9 +1703,8 @@ body.open .navbar-menu > a {
             margin: 2px 0;
         }
         .card-body {
-            font-size: 13px;
+            font-size: 12px;
             color: $gray-color;
-            line-height: 1.8;
             box-shadow: none;
             border-right: 1px solid #e7e7e7;
         }
@@ -1705,11 +1712,14 @@ body.open .navbar-menu > a {
             padding: 20px 0;
         }
     }
+    @include breakpoints(medium) {
+        margin: 20px 0;
+    }
     @include breakpoints(small) {
-        margin: 30px 0;
+        margin: 20px 0;
     }
     @include breakpoints(mobile) {
-        margin: 30px 0;
+        margin: 20px 0;
     }
 }
 // End About Us
@@ -1771,6 +1781,7 @@ body.open .navbar-menu > a {
         display: flex;
         gap: 10px;
         position: relative;
+        @extend transition;
         .text {
             margin-right: 20px;
             width:375px;
@@ -2196,6 +2207,12 @@ body.open .navbar-menu > a {
     padding: 60px 0 0;
     .main {
         padding: 20px 0 40px;
+        @include breakpoints(small) {
+            padding: 0 0 25px;
+        }
+        @include breakpoints(mobile) {
+            padding: 0 0 25px;
+        }
         h1 {
             font-size: 18px;
             font-weight: bold;
@@ -2223,6 +2240,12 @@ body.open .navbar-menu > a {
             li {
                 padding: 4px 0;
                 position: relative;
+                @include breakpoints(small) {
+                    padding: 0;
+                }
+                @include breakpoints(mobile) {
+                    padding: 0;
+                }
                 a {
                     color: #fff;
                     font-size: 13px;
@@ -2276,6 +2299,12 @@ body.open .navbar-menu > a {
             color: $main-color;
             margin: 0;
             padding: 0;
+            @include breakpoints(small) {
+                font-size: 14px;
+            }
+            @include breakpoints(mobile) {
+                font-size: 14px;
+            }
         }
         p {
             font-size: 17px;
@@ -2307,6 +2336,7 @@ body.open .navbar-menu > a {
                     background: #41434f;
                     right: 0;
                 }
+               
             }
         }
         @include breakpoints(medium) {
@@ -2363,6 +2393,12 @@ body.open .navbar-menu > a {
             padding: 15px 0;
         }
     }
+    @include breakpoints(small) {
+        padding: 15px 0;
+    }
+    @include breakpoints(mobile) {
+        padding: 15px 0;
+    }
 }
 
 // End Footer
@@ -2402,8 +2438,8 @@ body.open .navbar-menu > a {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position: absolute;
-    right: -40px;
-    padding: 9px 7px;
+    right: -45px;
+    padding: 9px 10px;
     font-size: 14px;
     color: #a4a2a7;
     background-color: transparent;
@@ -2418,8 +2454,8 @@ body.open .navbar-menu > a {
     border: 1px solid $main-color;
     font-weight: 900;
     position: absolute;
-    right: -40px;
-    padding: 9px 7px;
+    right: -45px;
+    padding: 9px 10px;
     font-size: 14px;
     top: -12px;
 

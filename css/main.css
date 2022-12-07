@@ -27,7 +27,7 @@ a:hover {
   background-color: 0;
 }
 
-transition, .card-header .btn-link:after, .scroll-top, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon::after, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .programe .timeline .icon, .services .box .text .see-more, .services .box .text h3, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
+transition, .card-header .btn-link:after, .scroll-top, .footer .main .list li a, .up-footer .subscribe .btn-sub, .up-footer .subscribe input, .up-footer .social li .icon, .contact form .btn-send, .contact form input, .contact .contact-info .icon::after, .contact .contact-info .icon, .contact .contact-info .text a, .contact .contact-info .text h5, .contact .contact-info, .about-us .read-more, .info .box .bg-color, .info .box, .package .boxing .box .buy-now, .package .boxing .box::before, .package .boxing .box .title .name, .programe .timeline .text h4, .programe .timeline .icon, .services .box .text .see-more, .services .box .text h3, .services .box .img::after, .services .box, .slider .text .submit, .navbar-scroll, .navbar .navbar-menu li a, .navbar .navbar-menu li, .navbar, .up-navbar .left li a .icon,
 .up-navbar .right li a .icon, .up-navbar .left li a,
 .up-navbar .right li a {
   transition: 0.3s;
@@ -962,7 +962,7 @@ body.open .navbar-menu > a {
   padding: 0 15px;
 }
 .services .box .text h3 {
-  font-size: 15px;
+  font-size: 14px;
   text-align: right;
   color: #ff6b6b;
   font-weight: bold;
@@ -1116,7 +1116,7 @@ body.open .navbar-menu > a {
   position: relative;
 }
 .programe .timeline .icon {
-  border: 2px solid #dedede;
+  border: 3px solid #dfdfdf;
   width: 130px;
   overflow: hidden;
   height: 80px;
@@ -1128,7 +1128,6 @@ body.open .navbar-menu > a {
   background-color: #21232f;
   position: relative;
   display: inline-block;
-  box-shadow: -1px 1px 6px 1px #dedede;
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   .programe .timeline .icon {
@@ -1231,8 +1230,7 @@ body.open .navbar-menu > a {
   cursor: pointer;
 }
 .programe .timeline:hover .icon {
-  border: 2px solid #ff6b6b;
-  box-shadow: -1px 1px 6px 1px #ff6b6b;
+  border: 3px solid #ff6b6b;
 }
 .programe .timeline:hover h4 {
   color: #21232f;
@@ -1257,7 +1255,7 @@ body.open .navbar-menu > a {
   position: absolute;
   height: 119px;
   width: 2px;
-  background: #a4a2a7;
+  background: #dfdfdf;
   bottom: -113px;
   right: 40px;
 }
@@ -1721,6 +1719,12 @@ body.open .navbar-menu > a {
   margin: 5px 0;
   font-weight: bold;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-us .title-about h3 {
+    font-size: 15px;
+    text-align: right;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .about-us .title-about h3 {
     font-size: 15px;
@@ -1738,6 +1742,12 @@ body.open .navbar-menu > a {
   font-size: 14px;
   color: #a4a2a7;
   margin-bottom: 3px;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .about-us .title-about p {
+    font-size: 12px;
+    text-align: right;
+  }
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .about-us .title-about p {
@@ -1895,9 +1905,8 @@ body.open .navbar-menu > a {
   margin: 2px 0;
 }
 .about-us .accordion .card-body {
-  font-size: 13px;
+  font-size: 12px;
   color: #a4a2a7;
-  line-height: 1.8;
   box-shadow: none;
   border-right: 1px solid #e7e7e7;
 }
@@ -1906,14 +1915,19 @@ body.open .navbar-menu > a {
     padding: 20px 0;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .about-us {
+    margin: 20px 0;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .about-us {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .about-us {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 }
 
@@ -2436,6 +2450,16 @@ body.open .navbar-menu > a {
 .footer .main {
   padding: 20px 0 40px;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer .main {
+    padding: 0 0 25px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .footer .main {
+    padding: 0 0 25px;
+  }
+}
 .footer .main h1 {
   font-size: 18px;
   font-weight: bold;
@@ -2469,6 +2493,16 @@ body.open .navbar-menu > a {
 .footer .main .list li {
   padding: 4px 0;
   position: relative;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer .main .list li {
+    padding: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .footer .main .list li {
+    padding: 0;
+  }
 }
 .footer .main .list li a {
   color: #fff;
@@ -2523,6 +2557,16 @@ body.open .navbar-menu > a {
   color: #ff6b6b;
   margin: 0;
   padding: 0;
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer .box-footer h4 {
+    font-size: 14px;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .footer .box-footer h4 {
+    font-size: 14px;
+  }
 }
 .footer .box-footer p {
   font-size: 17px;
@@ -2623,6 +2667,16 @@ body.open .navbar-menu > a {
     padding: 15px 0;
   }
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .footer {
+    padding: 15px 0;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .footer {
+    padding: 15px 0;
+  }
+}
 
 .scroll-top {
   position: fixed;
@@ -2658,8 +2712,8 @@ body.open .navbar-menu > a {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  right: -40px;
-  padding: 9px 7px;
+  right: -45px;
+  padding: 9px 10px;
   font-size: 14px;
   color: #a4a2a7;
   background-color: transparent;
@@ -2674,8 +2728,8 @@ body.open .navbar-menu > a {
   border: 1px solid #ff6b6b;
   font-weight: 900;
   position: absolute;
-  right: -40px;
-  padding: 9px 7px;
+  right: -45px;
+  padding: 9px 10px;
   font-size: 14px;
   top: -12px;
 }
