@@ -749,14 +749,14 @@ body.open .navbar-menu > a {
 @media (min-width: 576px) and (max-width: 767px) {
   .slider .text h1 {
     font-size: 15px;
-    margin: 80px 60px 70px;
+    margin: 30px 60px 10px;
   }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .slider .text h1 {
     letter-spacing: auto;
     font-size: 15px;
-    margin: 80px 50px 70px;
+    margin: 30px 50px 10px;
   }
 }
 .slider .text .submit {
