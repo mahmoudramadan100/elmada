@@ -1,16 +1,16 @@
-// const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
 
-// window.onscroll = () => {
-//     if (window.scrollY > 550) {
-//         navbar
-//             .classList
-//             .add('navbar-scroll');
-//     } else {
-//         navbar
-//             .classList
-//             .remove('navbar-scroll');
-//     }
-// };
+window.onscroll = () => {
+    if (window.scrollY > 550) {
+        navbar
+            .classList
+            .add('navbar-scroll');
+    } else {
+        navbar
+            .classList
+            .remove('navbar-scroll');
+    }
+};
 
 // Header Slider
 
@@ -87,3 +87,17 @@ var swiper = new Swiper(".network", {
     }
 });
 
+
+
+$(window).scroll(function(){
+    if ($(this).scrollTop() > 800) {
+        $('.scroll-top').fadeIn();
+    } else {
+        $('.scroll-top').fadeOut();
+    }
+});
+//Click event to scroll to top
+$('.scroll-top').click(function(){
+    $('html, body').animate({scrollTop : 0},360);
+    return false;
+});

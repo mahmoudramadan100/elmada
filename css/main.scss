@@ -136,9 +136,11 @@ transition {
         }
         @include breakpoints(small) {
             font-size: 17px;
+            margin: 10px 0;
         }
         @include breakpoints(mobile) {
             font-size: 15px;
+            margin: 10px 0;
         }
     }
     p {
@@ -151,6 +153,12 @@ transition {
         @include breakpoints(mobile) {
             font-size: 12px;
         }
+    }
+    @include breakpoints(small) {
+        margin: 0;
+    }
+    @include breakpoints(mobile) {
+        margin: 0;
     }
 }
 // Start UP-NABAR
@@ -335,11 +343,11 @@ body.open .navbar-burger {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 32px;
+        align-items: flex-start;
+        gap: 5px;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: $second-color;
         opacity: 0;
         visibility: hidden;
         transition: 0.5s;
@@ -351,11 +359,11 @@ body.open .navbar-burger {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 32px;
+        align-items: flex-start;
+        gap: 5px;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.8);
+        background: $second-color;
         opacity: 0;
         visibility: hidden;
         transition: 0.5s;
@@ -399,7 +407,7 @@ body.open .navbar-menu > a {
     position: relative;
     margin: 0;
     padding: 0;
-    height: 100px;
+    height: 85px;
     border-bottom: 2px solid #f5f5f3;
     @extend transition;
     @include breakpoints(medium) {
@@ -431,7 +439,7 @@ body.open .navbar-menu > a {
         li {
             padding: 0 17px;
             text-align: center;
-            height: 100px;
+            height: 85px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -460,8 +468,9 @@ body.open .navbar-menu > a {
                     align-items: center;
                     color: #fff;
                     text-decoration: none;
-                    font-size: 15px;
+                    font-size: 17px;
                     gap: 0;
+                    padding-right: 10px;
                 }
                 @include breakpoints(mobile) {
                     display: flex;
@@ -470,8 +479,9 @@ body.open .navbar-menu > a {
                     align-items: center;
                     color: #fff;
                     text-decoration: none;
-                    font-size: 15px;
+                    font-size: 17px;
                     gap: 0;
+                    padding-right: 10px;
                 }
             }
             &:hover {
@@ -512,7 +522,7 @@ body.open .navbar-menu > a {
             @include breakpoints(small) {
                 padding: 5px 0;
                 text-align: center;
-                height: 100px;
+                height: 55px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -525,7 +535,7 @@ body.open .navbar-menu > a {
             @include breakpoints(mobile) {
                 padding: 5px 0;
                 text-align: center;
-                height: 100px;
+                height: 55px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -601,13 +611,13 @@ body.open .navbar-menu > a {
     }
 }
 .navbar-scroll {
-    height: 75px !important;
+    height: 70px !important;
     position: fixed !important;
     top: 0;
     right: 0;
     z-index: 99;
     width: 100%;
-    background-color: rgba($second-color, 0.7);
+    background-color: rgba(255,255,255, 1);
     border-bottom: 2px solid $main-color;
     @extend transition;
     .container {
@@ -617,10 +627,10 @@ body.open .navbar-menu > a {
     }
     .navbar-menu {
         li {
-            height: 75px;
+            height: 70px;
             border-bottom: 2px solid $main-color;
             a {
-                font-size: 15px;
+                font-size: 14px;
             }
         }
     }
@@ -636,7 +646,7 @@ body.open .navbar-menu > a {
 }
 // Start Slider Section
 .slider {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 140px);
     width: 100%;
     .text {
         display: flex;
@@ -685,8 +695,8 @@ body.open .navbar-menu > a {
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.1) 0 4px 6px -1px, rgba(0, 0, 0, 0.06) 0 2px 4px -1px;
-            cursor: pointer;
+               box-shadow: rgb(0 0 0 / 41%) -2px 7px 8px 3px, rgb(0 0 0 / 82%) 0 2px 4px -1px;
+                cursor: pointer;
             @extend transition;
             &:hover {
                 color: #fff;
@@ -713,6 +723,9 @@ body.open .navbar-menu > a {
     }
 
     // Swiper Arrow
+    .swiper-button-next, .swiper-button-prev  {
+        z-index: 999;
+    }
 
     .swiper-button-next:after,
     .swiper-button-prev:after {
@@ -762,14 +775,15 @@ body.open .navbar-menu > a {
 .services {
     margin: 10px 0 40px;
     .box {
-        margin: 15px 0;
-        padding: 20px;
+        margin: 10px 0;
+        padding: 20px 0;
         border: 1px solid #a4a2a7;
         display: flex;
         gap: 10px;
+        max-height: 350px;
         @extend transition;
         .img {
-            width: 265px;
+            width: 245px;
             height: 90px;
             display: flex;
             padding: 5px;
@@ -782,6 +796,7 @@ body.open .navbar-menu > a {
             object-fit: contain;
             text-align: center;
             margin: 0 auto;
+            margin-right: 35px;
             background-color: #ff6b6b;
             justify-content: center;
             align-items: center;
@@ -790,19 +805,23 @@ body.open .navbar-menu > a {
             img {
                 color: $second-color;
                 text-align: center;
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 position: absolute;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
+                @include breakpoints(medium) {
+                    width: 40px;
+                    height: 40px;
+                }
                 @include breakpoints(small) {
-                    width: 50px;
-                    height: 50px;
+                    width: 40px;
+                    height: 40px;
                 }
                 @include breakpoints(mobile) {
-                    width: 35px;
-                    height: 35px;
+                    width: 25px;
+                    height: 25px;
                 }
             }
             &::after {
@@ -814,28 +833,46 @@ body.open .navbar-menu > a {
                 -moz-border-radius: 50%;
                 -ms-border-radius: 50%;
                 -o-border-radius: 50%;
-                width: 100px;
-                height: 100px;
+                width: 120%;
+                height: 120%;
                 border: 1px solid #a4a2a7;
                 cursor: pointer;
                 @extend transition;
                 &:hover {
                     border: 1px solid $main-color;
                 }
+                @include breakpoints(small) {
+                    // width: 80px;
+                    // height: 80px;
+                }
                 @include breakpoints(mobile) {
-                    width: 80px;
-                    height: 80px;
+                    // width: 80px;
+                    // height: 80px;
                 }
             }
             @include breakpoints(large) {
                 width: 325px;
             }
             @include breakpoints(medium) {
-                width: 565px;
+                width: 70px;
+                height: 80px;
+                margin: 0 auto;
+                padding: 0 !important;
+                transform: translate(0, 0);
             }
-            @include breakpoints(mobile) {
+            @include breakpoints(small) {
                 width: 70px;
                 height: 70px;
+                margin: 0 auto;
+                padding: 0 !important;
+                transform: translate(0, 0);
+            }
+            @include breakpoints(mobile) {
+                width: 50px;
+                height: 50px;
+                margin: 0 auto;
+                padding: 0 !important;
+                transform: translate(0, 0);
             }
         }
         .text {
@@ -849,6 +886,12 @@ body.open .navbar-menu > a {
                 @extend transition;
                 @include breakpoints(medium) {
                     font-size: 14px;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+                @include breakpoints(small) {
+                    font-size: 14px;
+                    text-align: center;
                 }
                 @include breakpoints(mobile) {
                     font-size: 14px;
@@ -859,9 +902,15 @@ body.open .navbar-menu > a {
                 font-size: 12px;
                 color: $gray-color;
                 line-height: 1.8;
+                @include breakpoints(small) {
+                    font-size: 11px;
+                    line-height: 1.7;
+                    text-align: center;
+                }
                 @include breakpoints(mobile) {
                     font-size: 11px;
                     line-height: 1.7;
+                    text-align: center;
                 }
             }
             .see-more {
@@ -871,7 +920,7 @@ body.open .navbar-menu > a {
                 font-size: 13px;
                 text-align: center;
                 position: relative;
-                right: 70%;
+                right: calc(100% - 120px);
                 border-radius: 3px;
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
@@ -881,17 +930,19 @@ body.open .navbar-menu > a {
                 &:hover {
                     background-color: $main-color;
                 }
+                @include breakpoints(large) {
+                    right: 60%;
+                }
                 @include breakpoints(medium) {
-                    right: 45%;
+                    right: calc(50% - 50px);
                 }
                 @include breakpoints(small) {
-                    // right: 0;
+                    right: calc(50% - 50px);
                 }
                 @include breakpoints(mobile) {
-                    // right: 0;
                     padding: 5px 20px;
                     font-size: 11px;
-                    right: 30%;
+                    right: calc(50% - 50px);
                 }
             }
         }
@@ -905,10 +956,31 @@ body.open .navbar-menu > a {
                 color: $second-color;
             }
         }
+        @include breakpoints(medium) {
+            gap: 25px;
+            flex-direction: column;
+            margin: 4px 0;
+            padding: 20px 0;
+            max-height: 300px;
+        }
+        @include breakpoints(small) {
+            gap: 25px;
+            flex-direction: column;
+            margin: 4px 0;
+            padding: 20px 0;
+            max-height: 300px;
+        }
         @include breakpoints(mobile) {
             gap: 25px;
             flex-direction: column;
+            margin: 4px 0;
+            padding: 20px 0;
+            max-height: 300px;
         }
+    }
+    .custom-padding {
+        padding-right: 10px;
+        padding-left: 15px;
     }
 }
 // End Services
@@ -937,7 +1009,7 @@ body.open .navbar-menu > a {
         align-items: center;
         position: relative;
         .icon {
-            border: 2px solid $gray-color;
+            border: 2px solid #dedede;
             width: 130px;
             overflow: hidden;
             height: 80px;
@@ -949,6 +1021,8 @@ body.open .navbar-menu > a {
             background-color: $second-color;
             position: relative;
             display: inline-block;
+            box-shadow: -1px 1px 6px 1px #dedede;
+            @extend transition;
             @include breakpoints(large) {
                 height: 65px;
             }
@@ -1007,18 +1081,23 @@ body.open .navbar-menu > a {
                 }
                 @include breakpoints(small) {
                     font-size: 13px;
+                    margin-bottom: 8px;
                 }
                 @include breakpoints(mobile) {
                     font-size: 13px;
-                    text-align: center;
+                    text-align: right;
                     margin-top: 15px;
                 }
             }
             p {
                 color: #3E3E40;
                 font-size: 13px;
+                @include breakpoints(small) {
+                    text-align: right;
+                    margin: 0;
+                }
                 @include breakpoints(mobile) {
-                    text-align: center;
+                    text-align: right;
                 }
             }
         }
@@ -1026,6 +1105,7 @@ body.open .navbar-menu > a {
             cursor: pointer;
             .icon {
                 border: 2px solid $main-color;
+                box-shadow: -1px 1px 6px 1px $main-color;
             }
             h4 {
                 color: $second-color;
@@ -1048,7 +1128,7 @@ body.open .navbar-menu > a {
             width: 2px;
             background: #a4a2a7;
             bottom: -113px;
-            right: 36px;
+            right: 40px;
             @include breakpoints(large) {
                 bottom: -97px;
                 right: 30px;
@@ -1059,8 +1139,8 @@ body.open .navbar-menu > a {
                 right: 26px;
             }
             @include breakpoints(small) {
-                height: 82px;
-                bottom: -55px;
+                height: 63px;
+                bottom: -45px;
                 right: 23px;
             }
             @include breakpoints(mobile) {
@@ -1072,7 +1152,6 @@ body.open .navbar-menu > a {
         }
         @include breakpoints(mobile) {
             display: flex;
-            flex-direction: column;
         }
     }
     .display-none {
@@ -1100,6 +1179,13 @@ body.open .navbar-menu > a {
             object-fit: contain;
             max-width: 100%;
         }
+    }
+    @include breakpoints(small) {
+        margin: 5px 0;
+    }
+    @include breakpoints(mobile) {
+        margin: 5px 0;
+        padding: 10px 0;
     }
 }
 
@@ -1131,7 +1217,7 @@ body.open .navbar-menu > a {
                     align-items: center;
                     justify-content: center;
                     color: #fff;
-                    background: rgba($second-color, 0.8) url("../img/slic.png") no-repeat;
+                    background: rgba($second-color, 1.95) url("../img/slic.png") no-repeat;
                     background-size: cover;
                     height: 100%;
                     width: 65%;
@@ -1285,6 +1371,12 @@ body.open .navbar-menu > a {
                 margin: 0 auto;
             }
         }
+        @include breakpoints(small) {
+            padding: 40px 0;
+        }
+        @include breakpoints(mobile) {
+            padding: 40px 0;
+        }
     }
 }
 // End Package
@@ -1329,6 +1421,10 @@ body.open .navbar-menu > a {
                 font-size: 13px;
                 font-weight: 300;
             }
+            @include breakpoints(mobile) {
+                font-size: 12px;
+                font-weight: 300;
+            }
         }
         .bg-color {
             background-color: $second-color;
@@ -1362,34 +1458,76 @@ body.open .navbar-menu > a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 95%;
+        margin: 0 auto;
         height: 140px;
-        background-color: #fff;
+        background-color: #f3f3f3;
+        box-shadow: -5px 3px 42px 36px rgba(255,255,255,0.28) inset;
+        -webkit-box-shadow: -5px 3px 42px 36px rgba(255,255,255,0.28) inset;
+        -moz-box-shadow: -5px 3px 42px 36px rgba(255,255,255,0.28) inset;
         margin-bottom: 0;
         h3 {
             margin: 0 0 5px;
             font-size: 25px;
             color: $second-color;
             font-weight: bold;
+            @include breakpoints(medium) {
+                font-size: 15px;
+            }
+            @include breakpoints(mobile) {
+                font-size: 18px;
+            }
+            @include breakpoints(small) {
+                font-size: 16px;
+            }
         }
         p {
             margin: 0;
             font-size: 18px;
             color: $main-color;
             font-weight: bold;
+            @include breakpoints(medium) {
+                font-size: 16px;
+            }
+            @include breakpoints(mobile) {
+                font-size: 16px;
+            }
+            @include breakpoints(small) {
+                font-size: 14px;
+            }
+        }
+        @include breakpoints (medium) {
+            order: 1;
+            margin-bottom: 10px;
+            max-width: 310px;
+            margin: 0 auto 10px;
+            height: 140px;
+            width: 100%;
         }
         @include breakpoints (small) {
             order: 1;
-            margin-bottom: 30px;
-            margin-bottom: 30px;
-            max-width: 320px;
-            margin: 0 auto 30px;
+            margin-bottom: 10px;
+            max-width: 310px;
+            margin: 0 auto 10px;
+            height: 100px;
+            width: 100%;
         }
         @include breakpoints (mobile) {
             order: 1;
-            margin-bottom: 30px;
-            max-width: 320px;
-            margin: 0 auto 30px;
+            margin-bottom: 10px;
+            max-width: 310px;
+            margin: 0 auto 10px;
+            height: 100px;
+            width: 100%;
         }
+    }
+    @include breakpoints(small) {
+        margin: 0;
+        padding: 10px 0;
+    }
+    @include breakpoints(mobile) {
+        margin: 0;
+        padding: 10px 0;
     }
 }
 // End Info
@@ -1463,10 +1601,11 @@ body.open .navbar-menu > a {
             @include breakpoints(small) {
                 font-size: 12px;
                 width: 100%;
-                max-height: 241px;
+                max-height: 236px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding: 15px 0 10px;
+                text-align: center;
             }
             @include breakpoints(mobile) {
                 font-size: 11px;
@@ -1475,11 +1614,17 @@ body.open .navbar-menu > a {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding: 15px 0 10px;
+                text-align: center;
             }
+        }
+        @include breakpoints(small) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         @include breakpoints(mobile) {
             display: flex;
-         flex-direction: column;
+            flex-direction: column;
             align-items: center;
         }
     }
@@ -1519,11 +1664,13 @@ body.open .navbar-menu > a {
 
     .accordion {
         padding: 80px 0 0;
+        margin-right: 20px;
         .btn-link {
             border: none;
-            color: $main-color;
-            font-size: 14px;
+            color: $gray-color;
+            font-size: 13px;
             text-decoration: none;
+            position: relative;
             cursor: pointer;
             &:focus {
                 outline: none;
@@ -1531,14 +1678,14 @@ body.open .navbar-menu > a {
             }
             .icon {
                 color: $main-color;
-            }
+            } 
         }
         .show {
             color: $main-color !important;
         }
         .card {
             border: none;
-            border-right: 1px solid rgba(0,0,0,.125);
+            border-right: 1px solid transparent;
         }
         .card-header {
             display: block;
@@ -1552,6 +1699,7 @@ body.open .navbar-menu > a {
             color: $gray-color;
             line-height: 1.8;
             box-shadow: none;
+            border-right: 1px solid #e7e7e7;
         }
         @include breakpoints(mobile) {
             padding: 20px 0;
@@ -1605,6 +1753,12 @@ body.open .navbar-menu > a {
         .swiper-pagination {
             position: fixed;
         }
+        @include breakpoints(small) {
+            padding: 10px 0;
+        }
+        @include breakpoints(mobile) {
+            padding: 10px 0;
+        }
     }
 }
 // End Network
@@ -1612,25 +1766,44 @@ body.open .navbar-menu > a {
 .contact {
     padding: 10px 0 40px;
     .contact-info {
-        margin: 15px 0;
-        padding: 20px;
+        margin: 0px 0;
+        padding: 25px 0;
         display: flex;
         gap: 10px;
         position: relative;
         .text {
-            margin-right: 10px;
+            margin-right: 20px;
             width:375px;
+            @include breakpoints(small) {
+                margin: 0;
+                width: auto;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+            }
             @include breakpoints(mobile) {
                 margin: 0;
                 width: auto;
-                text-align: center;
+                text-align: right;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
             }
             h5 {
                 color: $second-color;
                 font-size: 15px;
                 font-weight: bold;
                 margin-bottom: 15px;
-                @extend transition
+                @extend transition;
+                @include breakpoints(small) {
+                    display: none;
+                }
+                @include breakpoints(mobile) {
+                    display: none;
+                }
             }
             a {
                 display: block;
@@ -1643,8 +1816,8 @@ body.open .navbar-menu > a {
             }
         }
         .icon {
-            width: 115px;
-            height: 70px;
+            width: 95px;
+            height: 65px;
             border-radius: 50%;
             -webkit-border-radius: 50%;
             -moz-border-radius: 50%;
@@ -1654,8 +1827,8 @@ body.open .navbar-menu > a {
             position: relative;
             display: inline-block;
             @extend transition;
-            @include breakpoints(large) {
-                height: 65px;
+            @include breakpoints(large) {    
+                height: 55px;
             }
             @include breakpoints(medium) {
                 width: 90px;
@@ -1671,18 +1844,20 @@ body.open .navbar-menu > a {
             }
             &::after {
                 content: "";
-                content: "";
                 position: absolute;
-                width: 110%;
-                height: 110%;
+                width: 120%;
+                height: 120%;
                 background-color: transparent;
-                border: 1px solid #a4a2a7;
+                border: 1px solid #d4d4d4;
                 top: 0;
                 left: 0;
                 border-radius: 50%;
                 margin: 0 auto;
-                transform: translate(-3%, -4%);
+                transform: translate(-7%, -8%);
+                @extend transition;
+                // display: none;
             }
+           
         }
         .icon-info {
             color: $second-color;
@@ -1692,6 +1867,7 @@ body.open .navbar-menu > a {
             position: absolute;
             top: 50%;
             left: 50%;
+            // @extend transition;
             transform: translate(-50%, -50%);
             @include breakpoints(large) {
                 font-size: 22px;
@@ -1709,40 +1885,88 @@ body.open .navbar-menu > a {
         &:hover {
             .icon {
                 cursor: pointer;
+                &::after {
+                    border: 1px solid $second-color;
+                }
             }
             h5 {
                 color: $main-color;
                 cursor: pointer;
             }
-
+        
+        }
+        // &::before {
+        //     content: "";
+        //     width: 2px;
+        //     height: 135px;
+        //     background: #d6d6d6;
+        //     position: absolute;
+        //     top: 0;
+        //     opacity: 0.7;
+        //     right: 53px;
+        //     // display: none;
+        //     @include breakpoints(large) {
+        //         right: 45px;
+        //         height: 147px;
+        //     }
+        //     @include breakpoints(medium) {
+        //         right: 45px;
+        //     }
+        //     @include breakpoints(small) {
+        //         display: none;
+        //     }
+        //     @include breakpoints(mobile) {
+        //         display: none;
+        //     }
+        // }
+        @include breakpoints(mobile) {
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 0;
         }
         &::before {
             content: "";
-            width: 2px;
-            height: 135px;
-            background: #d6d6d6;
+            width: 1px;
+            height: 100%;
+            background: #efefef;
             position: absolute;
             top: 0;
-            right: 53px;
+            right: 35px;
             @include breakpoints(large) {
-                right: 45px;
-                height: 147px;
+                right: 25px;
             }
             @include breakpoints(medium) {
                 right: 45px;
             }
             @include breakpoints(small) {
-                display: none;
+                // display: none;
             }
             @include breakpoints(mobile) {
-                display: none;
-               
+                // display: none;
+                right: 25px;
             }
         }
-        @include breakpoints(mobile) {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        &::after {
+            content: "";
+            width: 90%;
+            height: 1px;
+            background: #efefef;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            @include breakpoints(large) {
+                right: 45px;
+            }
+            @include breakpoints(medium) {
+                right: 45px;
+            }
+            @include breakpoints(small) {
+                // display: none;
+                right: 0;
+            }
+            @include breakpoints(mobile) {
+                // display: none;
+            }
         }
     }
     // Form
@@ -1763,6 +1987,14 @@ body.open .navbar-menu > a {
                 outline: none;
                 border: 1px solid $main-color;
                 box-shadow: none;
+            }
+        }
+        .custom-padding {
+            padding-right: 5px;
+            padding-left: 15px;
+            @include breakpoints(mobile) {
+                padding-right: 10px;
+                padding-left: 10px;
             }
         }
         textarea {
@@ -1897,7 +2129,7 @@ body.open .navbar-menu > a {
             }
         }
         input {
-            width: 39%;
+            width: 52%;
             height: 35px;
             padding: 5px;
             background-color: $main-color;
@@ -1906,11 +2138,15 @@ body.open .navbar-menu > a {
             &::foucs {
                 border: 1px solid $second-color;
             }
+            @include breakpoints(mobile) {
+                width: 65%;
+                height: 35px;
+            }
         }
         ::placeholder {
             color: $second-color !important;
-            font-size: 13px;
-            padding: 5px 7px;
+            font-size: 9px;
+            padding: 3px 7px;
         }
 
         .btn-sub {
@@ -1961,7 +2197,7 @@ body.open .navbar-menu > a {
     .main {
         padding: 20px 0 40px;
         h1 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: $main-color;
             padding-right: 10px;
@@ -1981,10 +2217,12 @@ body.open .navbar-menu > a {
         .list {
             margin: 0;
             padding-top: 15px;
-            list-style: disc;
+            list-style: none;
             color: #50535a;
+            // padding: 15px 0;
             li {
                 padding: 4px 0;
+                position: relative;
                 a {
                     color: #fff;
                     font-size: 13px;
@@ -1999,6 +2237,18 @@ body.open .navbar-menu > a {
                         font-size: 11px;
                     }
                 }
+                &::before {
+                    content: "\f111";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-size: 8px;
+                    position: absolute;
+                    right: -30px;
+                    top: 10px;
+                    color: #4f525b;
+                }
             }
         }
     }
@@ -2006,6 +2256,7 @@ body.open .navbar-menu > a {
     .box-footer {
         background: #2e303c;
         width: 100%;
+        height: 85px;
         padding: 0 15px;
         display: flex;
         justify-content: space-between;
@@ -2042,9 +2293,9 @@ body.open .navbar-menu > a {
             align-items: center;
             li {
                 padding: 0 7px;
+                height: 85px;
                 color: #fff;
                 position: relative;
-                height: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -2083,7 +2334,7 @@ body.open .navbar-menu > a {
             }
             @include breakpoints(mobile) {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
             }
         }
         .logo {
@@ -2106,12 +2357,77 @@ body.open .navbar-menu > a {
             }
         }
         @include breakpoints(small) {
-            padding: 15px;
+            padding: 15px 0;
         }
         @include breakpoints(mobile) {
-            padding: 15px;
+            padding: 15px 0;
         }
     }
 }
 
 // End Footer
+.scroll-top {
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    background-color: $second-color;
+    color: $main-color;
+    cursor: pointer;
+    padding: 10px;
+    line-height: 10px;
+    border-radius: 50%;
+    border-color: transparent;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+   @extend transition;
+    &:hover {
+        color: #fff;
+        background-color: $main-color;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+  
+ .card-header .btn-link {
+    color: $main-color !important;
+  }
+  
+ .card-header .btn-link:after {
+    content: "\f068";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    right: -40px;
+    padding: 9px 7px;
+    font-size: 14px;
+    color: #a4a2a7;
+    background-color: transparent;
+    border: 1px solid #ff6b6b;
+    top: -12px;
+    @extend transition
+  }
+ .card-header .btn-link.collapsed:after {
+    content: "\2b";
+    color: #fff;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    font-weight: 900;
+    position: absolute;
+    right: -40px;
+    padding: 9px 7px;
+    font-size: 14px;
+    top: -12px;
+
+  }
+.btn-link.collapsed {
+     color: $gray-color !important;
+  }
+  
+ 
+  
+ 

@@ -17,11 +17,11 @@
         @media (min-width:992px) and (max-width: 1200px) {
             @content;
         }
-    } @else if $point == extraLarge {
+    } @else if $point == xlarge {
         @media (min-width:1201px) and (max-width: 1400px) {
             @content;
         }
-    } @else if $point == xlarge {
+    } @else if $point == xxlarge {
         @media (min-width:1401px) and (max-width: 3000px) {
             @content;
         }
