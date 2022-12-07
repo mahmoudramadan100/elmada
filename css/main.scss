@@ -1045,7 +1045,7 @@ body.open .navbar-menu > a {
                 height: 50px;
             }
             @include breakpoints(mobile) {
-                width: 60px;
+                width: 50px;
                 height: 50px;
             }
             @include custome-size {
