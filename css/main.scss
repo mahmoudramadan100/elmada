@@ -181,6 +181,9 @@ transition {
                 top: 0;
                 left: 0;
                 background: $gray-color;
+                @include breakpoints(mobile) {
+                    height: 40px !important;
+                }
             }
         }
     }
@@ -195,6 +198,7 @@ transition {
                 top: 0;
                 right: 0;
                 background: #e9e9e9;
+                
             }
             &:last-child {
                 background-color: #e2e2e2;
@@ -265,7 +269,7 @@ transition {
                     font-size: 12px;
                 }
                 @include breakpoints(mobile) {
-                    font-size: 12px;
+                    font-size: 8px;
                 }
             }
         }
@@ -769,6 +773,12 @@ body.open .navbar-menu > a {
         right: 2px;
         left: auto;
     }
+    @include breakpoints(small) {
+        height: calc(60vh - 140px) !important;
+    }
+    @include breakpoints(mobile) {
+        height: calc(60vh - 140px) !important;
+    }
 }
 // End Slider Section
 // Start Services
@@ -1035,8 +1045,11 @@ body.open .navbar-menu > a {
                 height: 50px;
             }
             @include breakpoints(mobile) {
-                width: 50px;
+                width: 60px;
                 height: 50px;
+            }
+            @include custome-size {
+                width: 80px;
             }
             .icons {
                 color: $main-color;
@@ -1059,7 +1072,6 @@ body.open .navbar-menu > a {
                 @include breakpoints(mobile) {
                     font-size: 16px;
                 }
-           
         }
         }
         .last-icon {
@@ -1371,6 +1383,12 @@ body.open .navbar-menu > a {
                 margin: 0 auto;
             }
         }
+        @include breakpoints(large) {
+            padding: 30px 0;
+        }
+        @include breakpoints(medium) {
+            padding: 30px 0;
+        }
         @include breakpoints(small) {
             padding: 40px 0;
         }
@@ -1521,6 +1539,10 @@ body.open .navbar-menu > a {
             width: 100%;
         }
     }
+    @include breakpoints(medium) {
+        margin: 0;
+        padding: 20px 0;
+    }
     @include breakpoints(small) {
         margin: 0;
         padding: 10px 0;
@@ -1601,7 +1623,7 @@ body.open .navbar-menu > a {
             @include breakpoints(medium) {
                 font-size: 12px;
                 width: 100%;
-                max-height: 240px;
+                max-height: 100px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding: 15px 0 10px;
@@ -1759,6 +1781,15 @@ body.open .navbar-menu > a {
         }
         .swiper-wrapper {
             padding-bottom: 80px;
+            @include breakpoints(medium) {
+                padding: 10px 0;
+            }
+            @include breakpoints(small) {
+                padding: 10px 0;
+            }
+            @include breakpoints(mobile) {
+                padding: 10px 0;
+            }
         }
         .swiper-pagination-bullet-active {
             background: $main-color;
@@ -1826,6 +1857,9 @@ body.open .navbar-menu > a {
                 @extend transition;
                 &:hover {
                     color: $main-color-alt;
+                }
+                @include custome-size {
+                   text-align: center;
                 }
             }
         }
@@ -1982,6 +2016,11 @@ body.open .navbar-menu > a {
             @include breakpoints(mobile) {
                 // display: none;
             }
+        }
+        @include custome-size {
+            display: flex;
+            flex-direction: column;
+            text-align: center !important;
         }
     }
     // Form
@@ -2142,6 +2181,9 @@ body.open .navbar-menu > a {
                 font-size: 17px !important;
                 padding-left: 5px;
             }
+            @include breakpoints(medium) {
+                margin-bottom: 5px;
+            }
         }
         input {
             width: 52%;
@@ -2152,6 +2194,9 @@ body.open .navbar-menu > a {
             @extend transition;
             &::foucs {
                 border: 1px solid $second-color;
+            }
+            @include breakpoints(medium) {
+                margin-top: 10px;
             }
             @include breakpoints(mobile) {
                 width: 65%;
@@ -2177,8 +2222,8 @@ body.open .navbar-menu > a {
             }
         }
         @include breakpoints(medium) {
-            flex-direction: column;
-            gap: 10px;
+            display: table;
+            text-align: center;
         }
         @include breakpoints(small) {
             display: flex;
@@ -2233,6 +2278,7 @@ body.open .navbar-menu > a {
             }
             @include breakpoints(mobile) {
                 font-size: 14px;
+                display: inline-block;
             }
         }
         .list {
@@ -2386,7 +2432,7 @@ body.open .navbar-menu > a {
                     font-size: 11px;
                 }
                 @include breakpoints(mobile) {
-                    font-size: 10px;
+                    font-size: 9px;
                 }
             }
         }

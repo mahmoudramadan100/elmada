@@ -202,6 +202,11 @@ transition, .card-header .btn-link:after, .scroll-top, .footer .main .list li a,
   left: 0;
   background: #a4a2a7;
 }
+@media (min-width: 0) and (max-width: 576px) {
+  .up-navbar .right li::after {
+    height: 40px !important;
+  }
+}
 .up-navbar .left li {
   position: relative;
 }
@@ -302,7 +307,7 @@ transition, .card-header .btn-link:after, .scroll-top, .footer .main .list li a,
 @media (min-width: 0) and (max-width: 576px) {
   .up-navbar .left li a,
 .up-navbar .right li a {
-    font-size: 12px;
+    font-size: 8px;
   }
 }
 .up-navbar .support {
@@ -848,6 +853,16 @@ body.open .navbar-menu > a {
   right: 2px;
   left: auto;
 }
+@media (min-width: 576px) and (max-width: 767px) {
+  .slider {
+    height: calc(60vh - 140px) !important;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .slider {
+    height: calc(60vh - 140px) !important;
+  }
+}
 
 .services {
   margin: 10px 0 40px;
@@ -1148,8 +1163,13 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .programe .timeline .icon {
-    width: 50px;
+    width: 60px;
     height: 50px;
+  }
+}
+@media (min-width: 0) and (max-width: 375px) {
+  .programe .timeline .icon {
+    width: 80px;
   }
 }
 .programe .timeline .icon .icons {
@@ -1513,6 +1533,16 @@ body.open .navbar-menu > a {
     margin: 0 auto;
   }
 }
+@media (min-width: 992px) and (max-width: 1200px) {
+  .package .boxing {
+    padding: 30px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .package .boxing {
+    padding: 30px 0;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .package .boxing {
     padding: 40px 0;
@@ -1691,6 +1721,12 @@ body.open .navbar-menu > a {
     width: 100%;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .info {
+    margin: 0;
+    padding: 20px 0;
+  }
+}
 @media (min-width: 576px) and (max-width: 767px) {
   .info {
     margin: 0;
@@ -1791,7 +1827,7 @@ body.open .navbar-menu > a {
   .about-us .about-text p {
     font-size: 12px;
     width: 100%;
-    max-height: 240px;
+    max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     padding: 15px 0 10px;
@@ -1974,6 +2010,21 @@ body.open .navbar-menu > a {
 .network-section .network .swiper-wrapper {
   padding-bottom: 80px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .network-section .network .swiper-wrapper {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .network-section .network .swiper-wrapper {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 0) and (max-width: 576px) {
+  .network-section .network .swiper-wrapper {
+    padding: 10px 0;
+  }
+}
 .network-section .network .swiper-pagination-bullet-active {
   background: #ff6b6b;
 }
@@ -2050,6 +2101,11 @@ body.open .navbar-menu > a {
 }
 .contact .contact-info .text a:hover {
   color: #ca3531;
+}
+@media (min-width: 0) and (max-width: 375px) {
+  .contact .contact-info .text a {
+    text-align: center;
+  }
 }
 .contact .contact-info .icon {
   width: 95px;
@@ -2193,6 +2249,13 @@ body.open .navbar-menu > a {
   .contact .contact-info::after {
     left: 0;
     width: 93%;
+  }
+}
+@media (min-width: 0) and (max-width: 375px) {
+  .contact .contact-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center !important;
   }
 }
 .contact form {
@@ -2370,6 +2433,11 @@ body.open .navbar-menu > a {
   font-size: 17px !important;
   padding-left: 5px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .up-footer .subscribe span {
+    margin-bottom: 5px;
+  }
+}
 .up-footer .subscribe input {
   width: 52%;
   height: 35px;
@@ -2379,6 +2447,11 @@ body.open .navbar-menu > a {
 }
 .up-footer .subscribe input::foucs {
   border: 1px solid #21232f;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .up-footer .subscribe input {
+    margin-top: 10px;
+  }
 }
 @media (min-width: 0) and (max-width: 576px) {
   .up-footer .subscribe input {
@@ -2414,8 +2487,8 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .up-footer .subscribe {
-    flex-direction: column;
-    gap: 10px;
+    display: table;
+    text-align: center;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
@@ -2488,6 +2561,7 @@ body.open .navbar-menu > a {
 @media (min-width: 0) and (max-width: 576px) {
   .footer .main h1 {
     font-size: 14px;
+    display: inline-block;
   }
 }
 .footer .main .list {
@@ -2660,7 +2734,7 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .footer .copyright .text p {
-    font-size: 10px;
+    font-size: 9px;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {

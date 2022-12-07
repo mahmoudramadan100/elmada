@@ -29,3 +29,9 @@
 }
 
 }
+
+@mixin custome-size {
+    @media (min-width: 0) and (max-width: 375px) {
+        @content;
+    }
+}
