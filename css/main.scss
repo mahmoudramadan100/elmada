@@ -1701,6 +1701,9 @@ body.open .navbar-menu > a {
             cursor: pointer;
             padding: 5px;
             margin: 2px 0;
+            @include breakpoints(mobile) {
+                margin: 2px 27px 2px 0;
+            }
         }
         .card-body {
             font-size: 12px;
