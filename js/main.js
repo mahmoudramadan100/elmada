@@ -12,6 +12,14 @@ window.onscroll = () => {
     }
 };
 
+
+// Navbar Mobile
+const toggleMenu = () => {
+    document
+        .body
+        .classList
+        .toggle("open");
+};
 // Header Slider
 
 var swiper = new Swiper(".slider", {
