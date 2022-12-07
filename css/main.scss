@@ -1973,7 +1973,8 @@ body.open .navbar-menu > a {
             }
             @include breakpoints(small) {
                 // display: none;
-                right: 0;
+                left: 0;
+                width: 93%;
             }
             @include breakpoints(mobile) {
                 // display: none;

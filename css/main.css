@@ -2186,7 +2186,8 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .contact .contact-info::after {
-    right: 0;
+    left: 0;
+    width: 93%;
   }
 }
 .contact form {
