@@ -1906,7 +1906,7 @@ body.open .navbar-menu > a {
 }
 @media (min-width: 0) and (max-width: 576px) {
   .about-us .accordion .card-header {
-    margin: 2px 27px 2px 0;
+    margin: 2px 30px 2px 0;
   }
 }
 .about-us .accordion .card-body {
